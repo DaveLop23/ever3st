@@ -30,7 +30,7 @@ const Plans = () => {
                 src= {pricingRibbon}
                 alt="pricingRibbon"
                 className="img-fluid"
-                style={{ maxHeight: '70px', width: '100%' }}
+                style={{ maxHeight: '130px', width: '100%' }}
               />
             </div>
           </div>

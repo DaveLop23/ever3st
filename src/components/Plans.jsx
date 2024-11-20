@@ -5,16 +5,68 @@ import basicPlan from '../assets/img/basicPlan.png';
 import intermediatePlan from '../assets/img/intermediatePlan.png';
 import advancePlan from '../assets/img/advancePlan.png';
 
+const plans = [
+  {
+    img: basicPlan,
+    alt: "basicPlan",
+    bgColor: "#E76880",
+    features: [
+      "6 Publicaciones al mes",
+      "Diseño de imagen de portada",
+      "Diseño de imagen de perfil",
+      "Configuración de Redes Sociales"
+    ],
+    boldFeatures: [
+      "Administración de campañas publicitarias",
+      "Pauta Publicitaria por 10 días"
+    ],
+    disclaimer: "* Asesoramiento gratuito"
+  },
+  {
+    img: intermediatePlan,
+    alt: "intermediatePlan",
+    bgColor: "#029544",
+    features: [
+      "12 Publicaciones al mes",
+      "Diseño de imagen de portada",
+      "Diseño de imagen de perfil",
+      "Configuración de Redes Sociales",
+      "Optimización de WhatsApp Business"
+    ],
+    boldFeatures: [
+      "Administración de campañas publicitarias",
+      "Pauta Publicitaria por 20 días"
+    ],
+    disclaimer: "* Asesoramiento gratuito"
+  },
+  {
+    img: advancePlan,
+    alt: "advancePlan",
+    bgColor: "#01A6DC",
+    features: [
+      "20 Publicaciones al mes",
+      "Diseño de imagen de portada",
+      "Diseño de imagen de perfil",
+      "Configuración de Redes Sociales",
+      "Optimización de WhatsApp Business"
+    ],
+    boldFeatures: [
+      "Administración de campañas publicitarias",
+      "Pauta Publicitaria por 30 días"
+    ],
+    disclaimer: "* Asesoramiento gratuito"
+  }
+];
 
 const Plans = () => {
   return (
     <>
-      <section id="plans" className="py-5 bg-light" style={{ paddingBottom: -10 }}>
+      <section id="plans" className="py-5 bg-light" style={{ paddingBottom: -10, fontFamily: '"Commissioner", sans-serif' }}>
         <div className="container-fluid text-center">
           <div className="row justify-content-center align-items-center">
             <div className="col-auto">
               <img
-                src= {pricingPromo}
+                src={pricingPromo}
                 alt="pricingPromo"
                 className="img-fluid"
                 style={{ maxHeight: '80%', width: '100%' }}
@@ -27,7 +79,7 @@ const Plans = () => {
           <div className="row justify-content-center align-items-center">
             <div className="col-auto">
               <img
-                src= {pricingRibbon}
+                src={pricingRibbon}
                 alt="pricingRibbon"
                 className="img-fluid"
                 style={{ maxHeight: '130px', width: '100%' }}
@@ -37,67 +89,29 @@ const Plans = () => {
         </div>
       </section>
 
-      <section className="py-5 bg-light">
-        <div className="container px-5">
-          <div className="col-md-12">
-            <div className="row gx-4 gy-5">
-              <div className="col-md-6 col-lg-4">
+      <section className="py-5 bg-light" style={{ fontFamily: '"Commissioner", sans-serif' }}>
+        <div className="container">
+          <div className="row gx-4 gy-5">
+            {plans.map((plan, index) => (
+              <div className="col-md-6 col-lg-4" key={index}>
                 <div className="d-flex justify-content-center mb-3">
-                  <img src= {basicPlan} alt="basicPlan" className="i" />
+                  <img src={plan.img} alt={plan.alt} className="i" />
                 </div>
-                <div className="card p-4 shadow-sm" style={{ backgroundColor: '#E76880' }}>
+                <div className="card p-4 shadow-sm" style={{ backgroundColor: plan.bgColor }}>
                   <ul className="list-unstyled fw-light text-white">
-                    <li> - 6 Publicaciones al mes </li>
-                    <li> - Diseño de imagen de portada </li>
-                    <li> - Diseño de imagen de perfil </li>
-                    <li> - Configuración de Redes Sociales </li>
+                    {plan.features.map((feature, idx) => (
+                      <li key={idx}> - {feature} </li>
+                    ))}
                   </ul>
                   <ul className="list-unstyled fw-bolder text-white">
-                    <li> - Administración de campañas publicitarias </li>
-                    <li> - Pauta Publicitaria por 10 días </li>
+                    {plan.boldFeatures.map((boldFeature, idx) => (
+                      <li key={idx}> - {boldFeature} </li>
+                    ))}
                   </ul>
-                  <p className="list-unstyled fw-light text-white">* Asesoramiento gratuito</p>
+                  <p className="list-unstyled fw-light text-white">{plan.disclaimer}</p>
                 </div>
               </div>
-              <div className="col-md-6 col-lg-4">
-                <div className="d-flex justify-content-center mb-3">
-                  <img src= {intermediatePlan} alt="intermediatePlan" className="i" />
-                </div>
-                <div className="card p-4 shadow-sm" style={{ backgroundColor: '#029544' }}>
-                  <ul className="list-unstyled text-white fw-light text-start mt-3">
-                    <li> - 12 Publicaciones al mes </li>
-                    <li> - Diseño de imagen de portada </li>
-                    <li> - Diseño de imagen de perfil </li>
-                    <li> - Configuración de Redes Sociales </li>
-                    <li> - Optimización de WhatsApp Business </li>
-                  </ul>
-                  <ul className="list-unstyled text-white fw-bolder text-start">
-                    <li> - Administración de campañas publicitarias </li>
-                    <li> - Pauta Publicitaria por 20 días </li>
-                  </ul>
-                  <p className="text-white fw-normal text-start pricingCard-disclaimer">* Asesoramiento gratuito</p>
-                </div>
-              </div>
-              <div className="col-md-6 col-lg-4">
-                <div className="d-flex justify-content-center mb-3">
-                  <img src= {advancePlan} alt="advancePlan" className="i" />
-                </div>
-                <div className="card p-4 shadow-sm" style={{ backgroundColor: '#01A6DC' }}>
-                  <ul className="list-unstyled text-white fw-light text-start mt-3">
-                    <li> - 20 Publicaciones al mes </li>
-                    <li> - Diseño de imagen de portada </li>
-                    <li> - Diseño de imagen de perfil </li>
-                    <li> - Configuración de Redes Sociales </li>
-                    <li> - Optimización de WhatsApp Business </li>
-                  </ul>
-                  <ul className="list-unstyled text-white fw-bolder text-start">
-                    <li> - Administración de campañas publicitarias </li>
-                    <li> - Pauta Publicitaria por 30 días </li>
-                  </ul>
-                  <p className="text-white fw-normal text-start pricingCard-disclaimer">* Asesoramiento gratuito</p>
-                </div>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </section>

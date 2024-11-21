@@ -69,7 +69,7 @@ const Plans = () => {
               <img
                 src={pricingRibbon}
                 alt="pricingRibbon"
-                loading="lazy" 
+                loading="lazy"
                 className="img-fluid"
                 style={{ maxHeight: '130px', width: '100%' }}
               />
@@ -84,9 +84,9 @@ const Plans = () => {
             {plans.map((plan, index) => (
               <div className="col-md-6 col-lg-4" key={index}>
                 <div className="d-flex justify-content-center mb-3">
-                  <img 
-                  loading="lazy" 
-                  src={plan.img} alt={plan.alt} className="i" />
+                  <img
+                    loading="lazy"
+                    src={plan.img} alt={plan.alt} className="i" />
                 </div>
                 <div className="card feature-card p-4 shadow-sm" style={{ backgroundColor: plan.bgColor }}>
                   <ul className="list-unstyled fw-light text-white">

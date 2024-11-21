@@ -39,7 +39,7 @@ const Testimonials = () => {
                                 <div className="card-body">
                                     <img
                                         src={testimonial.image}
-                                        loading="lazy" 
+                                        loading="lazy"
                                         alt={`Testimonio de ${testimonial.name}`}
                                         className="rounded-circle mb-3 img-fluid"
                                         style={{ width: '100px', height: '100px', objectFit: 'cover' }}

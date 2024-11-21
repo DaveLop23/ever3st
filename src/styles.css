@@ -13011,10 +13011,3 @@ body {
   line-height: 1.2; 
   padding-bottom: 15px; 
 }
-
-.text-gradientNav {
-  background: linear-gradient(50deg, #F06C82, #01B6F9 33%, #149E2E 66%, #FB6D0E);
-  -webkit-background-clip: text;
-  color: transparent;
-  font-weight: bolder; /* Si deseas hacer que el texto sea más grueso */
-}

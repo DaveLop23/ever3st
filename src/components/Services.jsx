@@ -34,11 +34,11 @@ const services = [
 const Services = () => {
   return (
     <section id="services" className="py-5 bg-light" style={{ fontFamily: '"Commissioner", sans-serif' }}>
-           <div className="container">
-           <div className="row text-center mb-5">
+      <div className="container">
+        <div className="row text-center mb-5">
           <div className="col">
-          <h1 className="display-1 lh-1 mb-3 fw-bolder text-gradient">  Conoce nuestros servicios. </h1>
-          <p className="lead fw-normal text-muted mb-5"> ❝ Descubre cómo Ever3st Group puede potenciar tu marca con estrategias creativas y efectivas ❞ </p>
+            <h1 className="display-1 lh-1 mb-3 fw-bolder text-gradient">  Conoce nuestros servicios. </h1>
+            <p className="lead fw-normal text-muted mb-5"> ❝ Descubre cómo Ever3st Group puede potenciar tu marca con estrategias creativas y efectivas ❞ </p>
           </div>
         </div>
 
@@ -46,13 +46,13 @@ const Services = () => {
         <div className="row g-4">
           {services.map((service, index) => (
             <div className="col-md-4" key={index}>
-             <div className="feature-card text-center p-4 h-100 shadow-sm">
+              <div className="feature-card text-center p-4 h-100 shadow-sm">
                 <img
                   src={service.img}
                   alt={service.alt}
-                  loading="lazy" 
+                  loading="lazy"
                   className="mb-3 img-fluid"
-                  style={{ width: '30%', height: '30%', objectFit: 'contain' }} 
+                  style={{ width: '30%', height: '30%', objectFit: 'contain' }}
                 />
                 <h3 className="font-alt">{service.title}</h3>
                 <p className="text-muted">{service.description}</p>

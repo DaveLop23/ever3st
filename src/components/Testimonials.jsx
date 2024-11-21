@@ -35,7 +35,8 @@ const Testimonials = () => {
                 <div className="row g-4">
                     {testimonials.map((testimonial, index) => (
                         <div className="col-md-4" key={index}>
-                            <div className="feature-card text-center p-4 h-100 shadow-sm">
+                            <div className="feature-card text-center p-4 h-100 shadow-sm" style={{ backgroundColor: '#e9ecef' }}>
+
                                 <div className="card-body">
                                     <img
                                         src={testimonial.image}

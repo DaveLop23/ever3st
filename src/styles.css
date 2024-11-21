@@ -13003,10 +13003,3 @@ body {
   font-family: "Commissioner", sans-serif;
 }
 
-.text-gradient {
-  background: linear-gradient(50deg, #F06C82, #01B6F9 33%, #149E2E 66%, #FB6D0E);
-  -webkit-background-clip: text;
-  color: transparent;
-  line-height: 1.2; /* Ajusta según lo necesario */
-  padding-bottom: 15px; /* Añade espacio superior */
-}

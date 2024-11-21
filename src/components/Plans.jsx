@@ -88,7 +88,7 @@ const Plans = () => {
                   loading="lazy" 
                   src={plan.img} alt={plan.alt} className="i" />
                 </div>
-                <div className="card p-4 shadow-sm" style={{ backgroundColor: plan.bgColor }}>
+                <div className="card feature-card p-4 shadow-sm" style={{ backgroundColor: plan.bgColor }}>
                   <ul className="list-unstyled fw-light text-white">
                     {plan.features.map((feature, idx) => (
                       <li key={idx}> - {feature} </li>

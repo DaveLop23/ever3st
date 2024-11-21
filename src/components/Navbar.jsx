@@ -30,7 +30,7 @@ const Navbar = () => {
           <i className="bi bi-list"></i>
         </button>
         <div className="collapse navbar-collapse order-lg-1" id="navbarResponsive">
-          <ul className="navbar-nav ms-auto me-4 my-3 my-lg-0" style={{ fontWeight: 'bolder', fontFamily: 'Chewy, sans-serif' }}>
+          <ul className="navbar-nav ms-auto me-4 my-3 my-lg-0" style={{ fontWeight: 'bolder', fontFamily: 'Commissioner, sans-serif' }}>
             <li className="nav-item">
               <a
                 className={`nav-link me-lg-3 ${activeLink === 'home' ? 'active' : ''}`}

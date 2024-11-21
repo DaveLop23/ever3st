@@ -46,7 +46,7 @@ const Services = () => {
         <div className="row g-4">
           {services.map((service, index) => (
             <div className="col-md-4" key={index}>
-              <div className="feature-card text-center p-4 h-100 shadow-sm" style={{ backgroundColor: '#e9ecef'}}>
+              <div className="feature-card text-center p-4 h-100 shadow-sm" style={{ backgroundColor: '#e9ecef' }}>
                 <img
                   src={service.img}
                   alt={service.alt}

@@ -37,10 +37,8 @@ const Services = () => {
            <div className="container">
            <div className="row text-center mb-5">
           <div className="col">
-            <h2 className="font-alt">Nuestros Servicios</h2>
-            <p className="text-muted">
-              Descubre cómo Ever3st Group puede potenciar tu marca con estrategias creativas y efectivas.
-            </p>
+          <h1 className="display-1 lh-1 mb-3 fw-bolder text-gradient">  Conoce nuestros servicios. </h1>
+          <p className="lead fw-normal text-muted mb-5"> ❝ Descubre cómo Ever3st Group puede potenciar tu marca con estrategias creativas y efectivas ❞ </p>
           </div>
         </div>
 
@@ -52,6 +50,7 @@ const Services = () => {
                 <img
                   src={service.img}
                   alt={service.alt}
+                  loading="lazy" 
                   className="mb-3 img-fluid"
                   style={{ width: '30%', height: '30%', objectFit: 'contain' }} 
                 />

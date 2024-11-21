@@ -62,25 +62,14 @@ const Plans = () => {
   return (
     <>
       <section id="plans" className="py-5 bg-light" style={{ paddingBottom: -10, fontFamily: '"Commissioner", sans-serif' }}>
-        <div className="container-fluid text-center">
-          <div className="row justify-content-center align-items-center">
-            <div className="col-auto">
-              <img
-                src={pricingPromo}
-                alt="pricingPromo"
-                className="img-fluid"
-                style={{ maxHeight: '80%', width: '100%' }}
-              />
-            </div>
-          </div>
-        </div>
-        <br />
+        <h1 className="display-1 lh-1 mb-4 fw-bolder  text-center text-gradient">  ¡Que tu negocio destaque! </h1>
         <div className="container-fluid text-center" style={{ backgroundColor: '#01A6DC', overflowX: 'hidden' }}>
           <div className="row justify-content-center align-items-center">
             <div className="col-auto">
               <img
                 src={pricingRibbon}
                 alt="pricingRibbon"
+                loading="lazy" 
                 className="img-fluid"
                 style={{ maxHeight: '130px', width: '100%' }}
               />
@@ -95,7 +84,9 @@ const Plans = () => {
             {plans.map((plan, index) => (
               <div className="col-md-6 col-lg-4" key={index}>
                 <div className="d-flex justify-content-center mb-3">
-                  <img src={plan.img} alt={plan.alt} className="i" />
+                  <img 
+                  loading="lazy" 
+                  src={plan.img} alt={plan.alt} className="i" />
                 </div>
                 <div className="card p-4 shadow-sm" style={{ backgroundColor: plan.bgColor }}>
                   <ul className="list-unstyled fw-light text-white">

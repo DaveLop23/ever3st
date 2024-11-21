@@ -8,14 +8,14 @@ const Navbar = () => {
   };
 
   const navbarStyle = {
-    fontFamily: 'Chewy, sans-serif',
+    fontFamily: 'Commissioner, sans-serif',
   };
 
   return (
     <nav className="navbar navbar-expand-lg navbar-light fixed-top shadow-sm" id="mainNav">
       <div className="container px-5 d-flex justify-content-between align-items-center" style={navbarStyle}>
         <a className="navbar-brand fw-bold mx-auto order-1 order-lg-0" href="#page-top" style={navbarStyle}>
-          <img src={logo} alt="Ever3st Group" style={{ width: '180px', height: 'auto' }} />
+          <img src={logo}  loading="lazy"  alt="Ever3st Group" style={{ width: '180px', height: 'auto' }} />
         </a>
         <button
           className="navbar-toggler order-2"

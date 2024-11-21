@@ -28,8 +28,8 @@ const Testimonials = () => {
             <div className="container">
                 <div className="row text-center mb-5">
                     <div className="col">
-                        <h2 className="font-alt-5">Lo que nuestros clientes dicen de nosotros</h2>
-                        <p className="text-muted">Descubre cómo Ever3st Group ha ayudado a sus clientes.</p>
+                        <h1 className="display-1 lh-1 mb-3 fw-bolder text-gradient">  Lo que nuestros clientes dicen de nosotros. </h1>
+                        <p className="lead fw-normal text-muted mb-5"> ❝ Descubre cómo Ever3st Group ha ayudado a sus clientes ❞ </p>
                     </div>
                 </div>
                 <div className="row g-4">
@@ -39,6 +39,7 @@ const Testimonials = () => {
                                 <div className="card-body">
                                     <img
                                         src={testimonial.image}
+                                        loading="lazy" 
                                         alt={`Testimonio de ${testimonial.name}`}
                                         className="rounded-circle mb-3 img-fluid"
                                         style={{ width: '100px', height: '100px', objectFit: 'cover' }}

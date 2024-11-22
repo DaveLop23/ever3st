@@ -37,22 +37,22 @@ const Services = () => {
       <div className="container">
         <div className="row text-center mb-5">
           <div className="col">
-            <h1 className="display-1 lh-1 mb-3 fw-bolder text-gradient">  Conoce nuestros servicios. </h1>
+            <h1 className="display-3 lh-1 mb-3 fw-bolder text-gradient"> Conoce nuestros servicios. </h1>
             <p className="lead fw-normal text-muted mb-5"> ❝ Descubre cómo Ever3st Group puede potenciar tu marca con estrategias creativas y efectivas ❞ </p>
           </div>
         </div>
 
-        {/* Sección de servicios */}
+        {/* Sección de servicios con una distribución de 2 columnas y espacio entre las cards */}
         <div className="row g-4">
           {services.map((service, index) => (
-            <div className="col-md-4" key={index}>
-              <div className="feature-card text-center p-4 h-100 shadow-sm" style={{ backgroundColor: '#e9ecef' }}>
+            <div className="col-md-6 col-lg-3" key={index}>
+              <div className="feature-card text-center p-4 h-100 shadow-lg" style={{ backgroundColor: '#e9ecef' }}>
                 <img
                   src={service.img}
                   alt={service.alt}
                   loading="lazy"
                   className="mb-3 img-fluid"
-                  style={{ width: '30%', height: '30%', objectFit: 'contain' }}
+                  style={{ maxWidth: '50%', objectFit: 'contain' }}
                 />
                 <h3 className="font-alt">{service.title}</h3>
                 <p className="text-muted">{service.description}</p>

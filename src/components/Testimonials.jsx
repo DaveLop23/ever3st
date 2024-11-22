@@ -28,23 +28,22 @@ const Testimonials = () => {
             <div className="container">
                 <div className="row text-center mb-5">
                     <div className="col">
-                        <h1 className="display-1 lh-1 mb-3 fw-bolder text-gradient">  Lo que nuestros clientes dicen de nosotros. </h1>
+                        <h1 className="display-3 lh-1 mb-3 fw-bolder text-gradient"> Lo que nuestros clientes dicen de nosotros. </h1>
                         <p className="lead fw-normal text-muted mb-5"> ❝ Descubre cómo Ever3st Group ha ayudado a sus clientes ❞ </p>
                     </div>
                 </div>
                 <div className="row g-4">
                     {testimonials.map((testimonial, index) => (
-                        <div className="col-md-4" key={index}>
-                            <div className="feature-card text-center p-4 h-100 shadow-sm" style={{ backgroundColor: '#e9ecef' }}>
-
+                        <div className="col-md-6 col-lg-4" key={index}>
+                            <div className="feature-card text-center p-4 h-100 shadow-lg" style={{ backgroundColor: '#e9ecef' }}>
                                 <div className="card-body">
                                     <img
                                         src={testimonial.image}
                                         loading="lazy"
                                         alt={`Testimonio de ${testimonial.name}`}
                                         className="rounded-circle mb-3 img-fluid"
-                                        style={{ width: '100px', height: '100px', objectFit: 'cover' }}
-                                    />
+                                        style={{ maxWidth: '50%', objectFit: 'contain' }}
+                                        />
                                     <h5 className="fw-bold">{testimonial.name}</h5>
                                     <p className="text-muted">{testimonial.position}</p>
                                     <p>"{testimonial.testimonial}"</p>

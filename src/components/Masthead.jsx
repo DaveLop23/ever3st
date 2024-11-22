@@ -8,7 +8,10 @@ const Masthead = () => {
           <div className="col-lg-6">
             <div className="mb-5 mb-lg-0 text-center text-lg-start">
               <h1 className="display-1 lh-1 mb-3 fw-bolder text-gradient">  Impulsamos tu marca al siguiente nivel con creatividad y estrategia. </h1>
-              <p className="lead fw-normal text-muted mb-5"> ❝ Tu mensaje, nuestra creatividad: resultados que impactan ❞ </p>
+              <br />
+              <p className="lead fw-normal text-muted mb-5">
+                ❝ Tu mensaje, nuestra creatividad: resultados que impactan ❞
+              </p>
             </div>
           </div>
           <div className="col-lg-6">
@@ -19,9 +22,12 @@ const Masthead = () => {
                 xmlns="http://www.w3.org/2000/svg"
                 aria-label="Gradient Circle"
                 role="img"
+                width="100%"   // Asegura que el SVG se adapte al contenedor
+                height="auto"  // Mantiene la relación de aspecto
+                preserveAspectRatio="xMidYMid meet"  // Mantiene la escala proporcional
               >
                 <defs>
-                  <linearGradient id="circleGradient" gradientTransform="rotate(45)">
+                  <linearGradient id="circleGradient" x1="0%" y1="0%" x2="100%" y2="100%">
                     <stop offset="0%" stopColor="#F06C82" />
                     <stop offset="33%" stopColor="#01B6F9" />
                     <stop offset="66%" stopColor="#149E2E" />
@@ -32,7 +38,7 @@ const Masthead = () => {
               </svg>
 
               <svg
-                className="shape-1 d-none d-sm-block"
+                className="shape-1"
                 viewBox="0 0 240.83 240.83"
                 xmlns="http://www.w3.org/2000/svg"
                 aria-label="Background Shape 1"
@@ -57,7 +63,7 @@ const Masthead = () => {
               </svg>
 
               <svg
-                className="shape-2 d-none d-sm-block"
+                className="shape-2"
                 viewBox="0 0 100 100"
                 xmlns="http://www.w3.org/2000/svg"
                 aria-label="Background Shape 2"

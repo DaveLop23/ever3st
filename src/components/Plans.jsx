@@ -62,7 +62,7 @@ const Plans = () => {
   return (
     <>
       <section id="plans" className="py-5 bg-light" style={{ fontFamily: '"Commissioner", sans-serif' }}>
-        <h1 className="display-3 lh-1 mb-4 fw-bolder text-center text-gradient">¡Que tu negocio destaque!</h1>
+        <h1 className="display-1 lh-1 mb-4 fw-bolder text-center text-gradient">¡Que tu negocio destaque!</h1>
         <div className="container-fluid text-center" style={{ backgroundColor: '#01A6DC', overflowX: 'hidden' }}>
           <div className="row justify-content-center align-items-center">
             <div className="col-auto">
@@ -80,27 +80,27 @@ const Plans = () => {
 
       <section className="py-5 bg-light" style={{ fontFamily: '"Commissioner", sans-serif' }}>
         <div className="container">
-          <div className="row gx-5 gy-4">
+          <div className="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
             {plans.map((plan, index) => (
-              <div className="col-sm-12 col-md-6 col-lg-4" key={index}>
-                <div className="text-center mb-3">
+              <div className="col" key={index}>
+                <div className="d-flex justify-content-center mb-3">
                   <img
+                    loading="lazy"
                     src={plan.img}
                     alt={plan.alt}
-                    className="img-fluid rounded"
-                    style={{ maxWidth: '80%', height: 'auto', objectFit: 'contain' }}
-                    loading="lazy"
+                    className="img-fluid"
+                    style={{ maxWidth: '70%', objectFit: 'contain' }}
                   />
                 </div>
-                <div className="card feature-card p-4 shadow-lg" style={{ backgroundColor: plan.bgColor, borderRadius: '10px' }}>
-                  <ul className="list-unstyled fw-light text-white mb-3">
+                <div className="card feature-card p-4 shadow-lg" style={{ backgroundColor: plan.bgColor }}>
+                  <ul className="list-unstyled fw-light text-white">
                     {plan.features.map((feature, idx) => (
-                      <li key={idx}>• {feature}</li>
+                      <li key={idx}>- {feature}</li>
                     ))}
                   </ul>
-                  <ul className="list-unstyled fw-bolder text-white mb-3">
+                  <ul className="list-unstyled fw-bolder text-white">
                     {plan.boldFeatures.map((boldFeature, idx) => (
-                      <li key={idx}>• {boldFeature}</li>
+                      <li key={idx}>- {boldFeature}</li>
                     ))}
                   </ul>
                   <p className="fw-light text-white">{plan.disclaimer}</p>
